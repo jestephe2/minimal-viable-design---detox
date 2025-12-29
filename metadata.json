@@ -1,0 +1,8 @@
+{
+  "name": "Root Cause Reset Landing Page",
+  "description": "A high-conversion landing page for the Root Cause Reset functional medicine detox program, featuring a complete upsell sequence and interactive components.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
