@@ -44,7 +44,7 @@ export default async function handler(
     // TODO: Revert this before production launch
     const baseUrl = 'http://localhost:3001';
 
-    const session = await stripe.checkout.sessions.create({
+    const sessionConfig: any = {
       mode: 'payment',
       line_items: [
         {
@@ -54,13 +54,19 @@ export default async function handler(
       ],
       success_url: `${baseUrl}/rootcausereset?stripe_success=true&step=${nextStep}&product=${productType}&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${baseUrl}/rootcausereset?stripe_cancel=true`,
-      customer_email: customerEmail,
       metadata: {
         productType,
         customerName: customerName || '',
       },
       allow_promotion_codes: true,
-    });
+    };
+
+    // Only add customer_email if it's provided and valid
+    if (customerEmail && customerEmail.length > 0) {
+      sessionConfig.customer_email = customerEmail;
+    }
+
+    const session = await stripe.checkout.sessions.create(sessionConfig);
 
     return res.status(200).json({ sessionId: session.id, url: session.url });
   } catch (error: any) {
