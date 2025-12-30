@@ -1,5 +1,5 @@
 
-export type Step = 'landing' | 'checkout' | 'upsell1' | 'upsell2' | 'thankyou';
+export type Step = 'landing' | 'checkout' | 'upsell1' | 'upsell2' | 'upsell3' | 'thankyou';
 
 export interface UserSession {
   email: string;

@@ -13,6 +13,8 @@ interface UpsellSequenceProps {
 
 const UpsellSequence: React.FC<UpsellSequenceProps> = ({ step, onDecision, hasUpsell1 }) => {
   const redirectToStripe = async (product: 'upsell1' | 'upsell2a' | 'upsell2b') => {
+    console.log('🔵 redirectToStripe called for:', product);
+
     // Get the appropriate price ID
     const priceIds = {
       upsell1: 'price_1Sk78FKJt6B5i2JVT0qxanb9',
@@ -21,16 +23,22 @@ const UpsellSequence: React.FC<UpsellSequenceProps> = ({ step, onDecision, hasUp
     };
 
     const priceId = priceIds[product];
+    console.log('🔵 Using price ID:', priceId);
 
     // Get user session data from localStorage
     const storedSession = localStorage.getItem('user_session');
     let email = '';
     let name = '';
 
+    console.log('🔵 Stored session:', storedSession);
+
     if (storedSession) {
       const session = JSON.parse(storedSession);
       email = session.email || '';
       name = session.name || '';
+      console.log('🔵 Session data - email:', email, 'name:', name);
+    } else {
+      console.log('⚠️ No session found in localStorage!');
     }
 
     // Send upsell acceptance to GoHighLevel webhook
@@ -63,6 +71,7 @@ const UpsellSequence: React.FC<UpsellSequenceProps> = ({ step, onDecision, hasUp
       // Temporarily using production API for local testing
       const apiUrl = 'https://rootcausereset.vercel.app/api/create-checkout-session';
 
+      console.log('🔵 Calling API:', apiUrl);
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
@@ -76,20 +85,26 @@ const UpsellSequence: React.FC<UpsellSequenceProps> = ({ step, onDecision, hasUp
         }),
       });
 
+      console.log('🔵 API response status:', response.status);
+
       if (!response.ok) {
+        const errorData = await response.json();
+        console.error('❌ API error:', errorData);
         throw new Error('Failed to create checkout session');
       }
 
       const { url } = await response.json();
+      console.log('🔵 Checkout URL:', url);
 
       if (url) {
+        console.log('🔵 Redirecting to Stripe...');
         // Redirect to Stripe Checkout
         window.location.href = url;
       } else {
         throw new Error('No checkout URL returned');
       }
     } catch (error) {
-      console.error('Checkout error:', error);
+      console.error('❌ Checkout error:', error);
       alert('Something went wrong. Please try again.');
     }
   };
@@ -103,15 +118,8 @@ const UpsellSequence: React.FC<UpsellSequenceProps> = ({ step, onDecision, hasUp
     );
   }
 
-  // Upsell 2 - Show different page based on whether they bought the premium bundle
-  if (hasUpsell1) {
-    return (
-      <Upsell2bPage
-        onAccept={() => redirectToStripe('upsell2b')}
-        onDecline={() => onDecision(false)}
-      />
-    );
-  } else {
+  // Upsell 2 - Always show coaching call to everyone
+  if (step === 'upsell2') {
     return (
       <Upsell2aPage
         onAccept={() => redirectToStripe('upsell2a')}
@@ -119,6 +127,18 @@ const UpsellSequence: React.FC<UpsellSequenceProps> = ({ step, onDecision, hasUp
       />
     );
   }
+
+  // Upsell 3 - Always show credit offer to everyone
+  if (step === 'upsell3') {
+    return (
+      <Upsell2bPage
+        onAccept={() => redirectToStripe('upsell2b')}
+        onDecline={() => onDecision(false)}
+      />
+    );
+  }
+
+  return null;
 };
 
 export default UpsellSequence;

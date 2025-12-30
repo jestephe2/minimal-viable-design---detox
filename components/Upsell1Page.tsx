@@ -220,7 +220,7 @@ const Upsell1Page: React.FC<Upsell1PageProps> = ({ onAccept, onDecline }) => {
               },
               {
                 q: "Can I buy these supplements myself somewhere else?",
-                a: "You could, but you'd pay $307+ retail and spend hours researching dosages and timing. This bundle saves you $150 and includes Rachel's protocol guide showing you exactly how to take everything."
+                a: "Yes you could, but it would cost you more and you would still spend hours researching how to take them properly. This bundle saves you $150 and includes Rachel's protocol guide showing you exactly how to take everything."
               },
               {
                 q: "What if I'm already taking supplements?",
@@ -259,7 +259,7 @@ const Upsell1Page: React.FC<Upsell1PageProps> = ({ onAccept, onDecline }) => {
 
             <div className="flex items-center justify-center gap-2 text-zinc-600 text-sm">
               <i className="fas fa-lock"></i>
-              <span>Secure checkout • Ships within 24 hours • 30-day guarantee</span>
+              <span>Secure checkout • Ships within 24 hours</span>
             </div>
           </div>
 

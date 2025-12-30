@@ -34,7 +34,7 @@ export default async function handler(
     const stepMap: Record<string, string> = {
       main: 'upsell1',
       upsell1: 'upsell2',
-      upsell2a: 'thankyou',
+      upsell2a: 'upsell3',
       upsell2b: 'thankyou',
     };
 

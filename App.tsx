@@ -49,7 +49,7 @@ const App: React.FC = () => {
         purchasedItems.push('Premium Supplement Bundle');
         totalValue += 157;
       } else if (product === 'upsell2a') {
-        purchasedItems.push('Maintenance Plan');
+        purchasedItems.push('Root Cause Coaching Call');
         totalValue += 97;
       } else if (product === 'upsell2b') {
         purchasedItems.push('Optimal Health Credit');
@@ -113,12 +113,22 @@ const App: React.FC = () => {
 
   const handleUpsell2Decision = (accepted: boolean) => {
     if (accepted && session) {
-      const price = session.purchasedItems.includes('Premium Supplement Bundle') ? 250 : 97;
-      const itemName = session.purchasedItems.includes('Premium Supplement Bundle') ? 'Optimal Health Credit' : 'Maintenance Plan';
       setSession({
         ...session,
-        purchasedItems: [...session.purchasedItems, itemName],
-        totalValue: session.totalValue + price
+        purchasedItems: [...session.purchasedItems, 'Root Cause Coaching Call'],
+        totalValue: session.totalValue + 97
+      });
+    }
+    setCurrentStep('upsell3');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleUpsell3Decision = (accepted: boolean) => {
+    if (accepted && session) {
+      setSession({
+        ...session,
+        purchasedItems: [...session.purchasedItems, 'Optimal Health Credit'],
+        totalValue: session.totalValue + 250
       });
     }
     setCurrentStep('thankyou');
@@ -151,10 +161,14 @@ const App: React.FC = () => {
         />
       )}
 
-      {(currentStep === 'upsell1' || currentStep === 'upsell2') && session && (
+      {(currentStep === 'upsell1' || currentStep === 'upsell2' || currentStep === 'upsell3') && session && (
         <UpsellSequence
           step={currentStep}
-          onDecision={currentStep === 'upsell1' ? handleUpsell1Decision : handleUpsell2Decision}
+          onDecision={
+            currentStep === 'upsell1' ? handleUpsell1Decision :
+            currentStep === 'upsell2' ? handleUpsell2Decision :
+            handleUpsell3Decision
+          }
           hasUpsell1={session.purchasedItems.includes('Premium Supplement Bundle')}
         />
       )}
