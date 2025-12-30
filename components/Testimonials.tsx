@@ -5,21 +5,15 @@ const Testimonials: React.FC = () => {
   const testimonials = [
     {
       name: "Sarah M.",
-      quote: "I lost 12 lbs of inflammation in 28 days - I didn't think that was possible. The brain fog is totally gone.",
+      quote: "The most noticeable difference I felt was the lightness of my body. I was holding on to all of this inflammation unbeknownst to me. Didn't realize I could feel this good in my body.",
       outcome: "Energy: 3/10 → 9/10",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200&h=200"
     },
     {
       name: "Jennifer K.",
-      quote: "Finally, a detox that didn't leave me starving. I've reclaimed my afternoon focus.",
+      quote: "The meals weren't restrictive, I never felt hungry or angry!",
       outcome: "Resolved: Chronic Bloating",
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200&h=200"
-    },
-    {
-      name: "Amanda R.",
-      quote: "My skin cleared up by week 3 and I'm sleeping through the night for the first time in years.",
-      outcome: "Deep Sleep Recovered",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200"
     }
   ];
 
@@ -68,8 +62,8 @@ const Testimonials: React.FC = () => {
             <div className="flex gap-1.5">
               {[...Array(5)].map((_, i) => <i key={i} className="fas fa-star text-[#707756] text-[10px]"></i>)}
             </div>
-            <p className="text-[#707756] font-serif text-lg leading-relaxed">"Finally, a protocol that actually respects my time and cellular health."</p>
-            <span className="text-[#afa790] text-[10px] font-bold uppercase tracking-[0.3em]">— Jennifer L.</span>
+            <p className="text-[#707756] font-serif text-lg leading-relaxed">"My goal wasn't to lose weight, but I found I dropped 3 pounds in the first 2 weeks, without starving myself!"</p>
+            <span className="text-[#afa790] text-[10px] font-bold uppercase tracking-[0.3em]">— Lori M.</span>
           </div>
         </div>
       </div>
