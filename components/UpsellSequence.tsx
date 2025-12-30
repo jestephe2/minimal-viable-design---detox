@@ -15,9 +15,9 @@ const UpsellSequence: React.FC<UpsellSequenceProps> = ({ step, onDecision, hasUp
   const redirectToStripe = async (product: 'upsell1' | 'upsell2a' | 'upsell2b') => {
     // Get the appropriate price ID
     const priceIds = {
-      upsell1: 'price_1SjmmDKJt6B5i2JVkBVm1PPq',
-      upsell2a: 'price_1Sjn1wKJt6B5i2JV6O1lezsM',
-      upsell2b: 'price_1Sjn4HKJt6B5i2JV1RICNjsr',
+      upsell1: 'price_1Sk78FKJt6B5i2JVT0qxanb9',
+      upsell2a: 'price_1Sk78XKJt6B5i2JVRTXmbbfu',
+      upsell2b: 'price_1Sk78lKJt6B5i2JVKuWvUo99',
     };
 
     const priceId = priceIds[product];
@@ -38,7 +38,7 @@ const UpsellSequence: React.FC<UpsellSequenceProps> = ({ step, onDecision, hasUp
       const webhookUrl = 'https://services.leadconnectorhq.com/hooks/qQCPEPJKTOnlTBv5wJd9/webhook-trigger/9686cc72-e318-44e0-9737-c51652de3ad3';
 
       const productDetails = {
-        upsell1: { name: 'Premium Add-On Bundle', price: '$157' },
+        upsell1: { name: 'Premium Supplement Bundle', price: '$157' },
         upsell2a: { name: 'Coaching Call', price: '$97' },
         upsell2b: { name: '$400 Credit', price: '$250' },
       };
@@ -60,9 +60,8 @@ const UpsellSequence: React.FC<UpsellSequenceProps> = ({ step, onDecision, hasUp
       }).catch(err => console.error('Webhook error:', err));
 
       // Create Stripe Checkout Session via API
-      const apiUrl = window.location.hostname === 'localhost'
-        ? '/api/create-checkout-session'
-        : 'https://rootcausereset.vercel.app/api/create-checkout-session';
+      // Temporarily using production API for local testing
+      const apiUrl = 'https://rootcausereset.vercel.app/api/create-checkout-session';
 
       const response = await fetch(apiUrl, {
         method: 'POST',

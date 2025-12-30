@@ -46,7 +46,7 @@ const App: React.FC = () => {
         purchasedItems.push('Root Cause Reset - 28 Day Detox');
         totalValue += 497;
       } else if (product === 'upsell1') {
-        purchasedItems.push('Premium Add-On Bundle');
+        purchasedItems.push('Premium Supplement Bundle');
         totalValue += 157;
       } else if (product === 'upsell2a') {
         purchasedItems.push('Maintenance Plan');
@@ -103,7 +103,7 @@ const App: React.FC = () => {
     if (accepted && session) {
       setSession({
         ...session,
-        purchasedItems: [...session.purchasedItems, 'Premium Add-On Bundle'],
+        purchasedItems: [...session.purchasedItems, 'Premium Supplement Bundle'],
         totalValue: session.totalValue + 157
       });
     }
@@ -113,8 +113,8 @@ const App: React.FC = () => {
 
   const handleUpsell2Decision = (accepted: boolean) => {
     if (accepted && session) {
-      const price = session.purchasedItems.includes('Premium Add-On Bundle') ? 250 : 97;
-      const itemName = session.purchasedItems.includes('Premium Add-On Bundle') ? 'Optimal Health Credit' : 'Maintenance Plan';
+      const price = session.purchasedItems.includes('Premium Supplement Bundle') ? 250 : 97;
+      const itemName = session.purchasedItems.includes('Premium Supplement Bundle') ? 'Optimal Health Credit' : 'Maintenance Plan';
       setSession({
         ...session,
         purchasedItems: [...session.purchasedItems, itemName],
@@ -152,10 +152,10 @@ const App: React.FC = () => {
       )}
 
       {(currentStep === 'upsell1' || currentStep === 'upsell2') && session && (
-        <UpsellSequence 
-          step={currentStep} 
+        <UpsellSequence
+          step={currentStep}
           onDecision={currentStep === 'upsell1' ? handleUpsell1Decision : handleUpsell2Decision}
-          hasUpsell1={session.purchasedItems.includes('Premium Add-On Bundle')}
+          hasUpsell1={session.purchasedItems.includes('Premium Supplement Bundle')}
         />
       )}
 

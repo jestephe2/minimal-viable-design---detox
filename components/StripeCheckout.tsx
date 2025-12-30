@@ -12,10 +12,10 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ onSuccess, onCancel, pr
 
   const getPriceId = (): string => {
     const prices = {
-      main: 'price_1SeyykKJt6B5i2JVg5XfmjBl',
-      upsell1: 'price_1SjmmDKJt6B5i2JVkBVm1PPq',
-      upsell2a: 'price_1Sjn1wKJt6B5i2JV6O1lezsM',
-      upsell2b: 'price_1Sjn4HKJt6B5i2JV1RICNjsr',
+      main: 'price_1Sk77yKJt6B5i2JVKVdcuQ88',
+      upsell1: 'price_1Sk78FKJt6B5i2JVT0qxanb9',
+      upsell2a: 'price_1Sk78XKJt6B5i2JVRTXmbbfu',
+      upsell2b: 'price_1Sk78lKJt6B5i2JVKuWvUo99',
     };
     return prices[product] || prices.main;
   };
@@ -52,9 +52,8 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ onSuccess, onCancel, pr
         }).catch(err => console.error('Webhook error:', err));
 
         // Create Stripe Checkout Session via API
-        const apiUrl = window.location.hostname === 'localhost'
-          ? '/api/create-checkout-session'
-          : 'https://rootcausereset.vercel.app/api/create-checkout-session';
+        // Temporarily using production API for local testing
+        const apiUrl = 'https://rootcausereset.vercel.app/api/create-checkout-session';
 
         const response = await fetch(apiUrl, {
           method: 'POST',
