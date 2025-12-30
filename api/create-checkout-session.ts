@@ -40,12 +40,9 @@ export default async function handler(
 
     const nextStep = stepMap[productType] || 'thankyou';
 
-    // Use production domain or fallback to Vercel URL
-    const baseUrl = process.env.NODE_ENV === 'production'
-      ? 'https://joinrootedwellness.com'
-      : process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : 'http://localhost:3001';
+    // TEMPORARY: Force localhost for testing
+    // TODO: Revert this before production launch
+    const baseUrl = 'http://localhost:3001';
 
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
