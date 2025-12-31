@@ -12,19 +12,19 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ onSuccess, onCancel, pr
 
   const getPriceId = (): string => {
     const prices = {
-      main: import.meta.env.VITE_STRIPE_PRICE_MAIN,
-      upsell1: import.meta.env.VITE_STRIPE_PRICE_UPSELL1,
-      upsell2a: import.meta.env.VITE_STRIPE_PRICE_UPSELL2A,
-      upsell2b: import.meta.env.VITE_STRIPE_PRICE_UPSELL2B,
+      main: import.meta.env.VITE_STRIPE_PAYMENT_LINK_MAIN,
+      upsell1: import.meta.env.VITE_STRIPE_PAYMENT_LINK_UPSELL1,
+      upsell2a: import.meta.env.VITE_STRIPE_PAYMENT_LINK_UPSELL2A,
+      upsell2b: import.meta.env.VITE_STRIPE_PAYMENT_LINK_UPSELL2B,
     };
     const priceId = prices[product] || prices.main;
 
     // Debug logging
     console.log('Environment variables:', {
-      main: import.meta.env.VITE_STRIPE_PRICE_MAIN,
-      upsell1: import.meta.env.VITE_STRIPE_PRICE_UPSELL1,
-      upsell2a: import.meta.env.VITE_STRIPE_PRICE_UPSELL2A,
-      upsell2b: import.meta.env.VITE_STRIPE_PRICE_UPSELL2B,
+      main: import.meta.env.VITE_STRIPE_PAYMENT_LINK_MAIN,
+      upsell1: import.meta.env.VITE_STRIPE_PAYMENT_LINK_UPSELL1,
+      upsell2a: import.meta.env.VITE_STRIPE_PAYMENT_LINK_UPSELL2A,
+      upsell2b: import.meta.env.VITE_STRIPE_PAYMENT_LINK_UPSELL2B,
     });
     console.log('Selected product:', product, 'Price ID:', priceId);
 
