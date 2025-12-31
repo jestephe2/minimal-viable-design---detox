@@ -26,20 +26,20 @@ const Testimonials: React.FC = () => {
         </div>
         
         {/* Editorial Grid */}
-        <div className="grid md:grid-cols-12 gap-6 auto-rows-[250px] md:auto-rows-[400px]">
+        <div className="grid md:grid-cols-12 gap-6 auto-rows-[350px] md:auto-rows-[400px]">
           {/* Main Large Testimonial */}
           <div className="md:col-span-8 md:row-span-2 relative rounded-[3rem] overflow-hidden group border border-[#707756]/10 shadow-sm">
-            <img 
-              src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=1200" 
-              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-90" 
+            <img
+              src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=1200"
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-90"
               alt="Transformation"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#707756]/80 via-transparent to-transparent p-12 flex flex-col justify-end text-white">
-              <div className="max-w-md space-y-6">
-                <p className="text-3xl font-bold leading-tight italic serif-font">"{testimonials[0].quote}"</p>
-                <div className="flex items-center gap-6 border-t border-white/20 pt-6">
-                  <span className="font-bold text-lg uppercase tracking-tighter">{testimonials[0].name}</span>
-                  <span className="text-white/80 font-bold uppercase tracking-[0.2em] text-xs px-3 py-1 bg-white/10 rounded-full">{testimonials[0].outcome}</span>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#707756]/80 via-transparent to-transparent p-8 md:p-12 flex flex-col justify-end text-white">
+              <div className="max-w-md space-y-4 md:space-y-6">
+                <p className="text-xl md:text-3xl font-bold leading-tight italic serif-font">"{testimonials[0].quote}"</p>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 border-t border-white/20 pt-4 md:pt-6">
+                  <span className="font-bold text-base md:text-lg uppercase tracking-tighter">{testimonials[0].name}</span>
+                  <span className="text-white/80 font-bold uppercase tracking-[0.2em] text-xs px-3 py-1 bg-white/10 rounded-full inline-block self-start">{testimonials[0].outcome}</span>
                 </div>
               </div>
             </div>

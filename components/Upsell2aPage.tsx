@@ -85,15 +85,15 @@ const Upsell2aPage: React.FC<Upsell2aPageProps> = ({ onAccept, onDecline }) => {
           </div>
 
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-3xl p-8 mb-8 shadow-2xl">
-            <div className="flex items-start gap-6 mb-8">
-              <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 shadow-lg">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-8">
+              <div className="w-32 h-32 sm:w-24 sm:h-24 rounded-full overflow-hidden flex-shrink-0 shadow-lg">
                 <img
                   src="/images/dr. emily headshot.png"
                   alt="Dr. Emily Plasker, DC, IHP"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div>
+              <div className="text-center sm:text-left">
                 <h3 className="text-2xl font-bold text-zinc-900 mb-2">Meet Dr. Emily Plasker, DC, IHP</h3>
                 <p className="text-zinc-700">
                   Doctor of Chiropractic and Integrative Health Practitioner with over 15 years of experience helping thousands of clients achieve optimal health through personalized detox protocols.
