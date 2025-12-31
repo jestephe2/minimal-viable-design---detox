@@ -17,7 +17,22 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ onSuccess, onCancel, pr
       upsell2a: import.meta.env.VITE_STRIPE_PRICE_UPSELL2A,
       upsell2b: import.meta.env.VITE_STRIPE_PRICE_UPSELL2B,
     };
-    return prices[product] || prices.main;
+    const priceId = prices[product] || prices.main;
+
+    // Debug logging
+    console.log('Environment variables:', {
+      main: import.meta.env.VITE_STRIPE_PRICE_MAIN,
+      upsell1: import.meta.env.VITE_STRIPE_PRICE_UPSELL1,
+      upsell2a: import.meta.env.VITE_STRIPE_PRICE_UPSELL2A,
+      upsell2b: import.meta.env.VITE_STRIPE_PRICE_UPSELL2B,
+    });
+    console.log('Selected product:', product, 'Price ID:', priceId);
+
+    if (!priceId) {
+      throw new Error('Stripe price ID not configured. Please check environment variables.');
+    }
+
+    return priceId;
   };
 
   const getProductInfo = () => {

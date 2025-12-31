@@ -23,7 +23,14 @@ const UpsellSequence: React.FC<UpsellSequenceProps> = ({ step, onDecision, hasUp
     };
 
     const priceId = priceIds[product];
+    console.log('🔵 Environment variables:', priceIds);
     console.log('🔵 Using price ID:', priceId);
+
+    if (!priceId) {
+      console.error('❌ Stripe price ID not configured for:', product);
+      alert('Stripe configuration error. Please contact support.');
+      return;
+    }
 
     // Get user session data from localStorage
     const storedSession = localStorage.getItem('user_session');
