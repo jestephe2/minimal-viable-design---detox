@@ -38,7 +38,7 @@ const SolutionSection: React.FC = () => {
           ].map((item, i) => (
             <div key={i} className="group space-y-8 p-10 rounded-[2.5rem] bg-white border border-[#707756]/5 hover:border-[#707756]/20 transition-all shadow-sm">
               <div className="flex justify-between items-center">
-                <span className="text-[#afa790] text-[10px] font-bold uppercase tracking-[0.2em]">{item.step}</span>
+                <span className="text-[#afa790] text-xs font-bold uppercase tracking-[0.2em]">{item.step}</span>
                 <i className={`fas ${item.icon} text-[#707756]/30 group-hover:text-[#707756] transition-colors`}></i>
               </div>
               <div className="space-y-4">
@@ -53,7 +53,7 @@ const SolutionSection: React.FC = () => {
           <div className="absolute -top-24 -right-24 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
           <div className="space-y-4 relative z-10 text-center md:text-left">
             <h3 className="text-4xl font-bold">Comprehensive metabolic support.</h3>
-            <p className="text-zinc-300 font-light max-w-lg">Everything included: UltraClear RENEW, AdvaClear, and your 28-day roadmap.</p>
+            <p className="text-white/90 font-light max-w-lg">Everything included: UltraClear RENEW, AdvaClear, and your 28-day roadmap.</p>
           </div>
           <a 
             href="#join"
