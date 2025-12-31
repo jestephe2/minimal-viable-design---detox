@@ -17,9 +17,9 @@ const UpsellSequence: React.FC<UpsellSequenceProps> = ({ step, onDecision, hasUp
 
     // Get the appropriate price ID
     const priceIds = {
-      upsell1: 'price_1Sk78FKJt6B5i2JVT0qxanb9',
-      upsell2a: 'price_1Sk78XKJt6B5i2JVRTXmbbfu',
-      upsell2b: 'price_1Sk78lKJt6B5i2JVKuWvUo99',
+      upsell1: import.meta.env.VITE_STRIPE_PRICE_UPSELL1,
+      upsell2a: import.meta.env.VITE_STRIPE_PRICE_UPSELL2A,
+      upsell2b: import.meta.env.VITE_STRIPE_PRICE_UPSELL2B,
     };
 
     const priceId = priceIds[product];
