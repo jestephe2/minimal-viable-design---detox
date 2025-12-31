@@ -19,71 +19,61 @@ const Hero: React.FC<HeroProps> = ({ onStart }) => {
       </div>
 
       <div className="max-w-5xl w-full text-center space-y-10 z-10">
-        <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#707756]/5 border border-[#707756]/10 text-[#707756] text-[10px] font-bold uppercase tracking-[0.25em]">
+        <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#707756]/5 border border-[#707756]/10 text-[#707756] text-xs font-bold uppercase tracking-[0.25em]">
           <span className="w-1.5 h-1.5 rounded-full bg-[#707756] animate-pulse"></span>
-          Clinically Vetted Protocol
+          Trusted by 500+ Wellness Seekers
         </div>
-        
-        <h1 className="text-6xl md:text-9xl font-bold text-[#707756] tracking-tight leading-[0.9] md:leading-[1]">
-          Root Cause <br />
-          <span className="italic font-normal serif-font text-[#afa790]">Reset.</span>
+
+        <h1 className="text-5xl md:text-7xl font-bold text-[#707756] tracking-tight leading-[1.1]">
+          Transform Your Hormone & <br className="hidden md:block" />
+          Metabolic Health in <span className="text-[#afa790]">28 Days</span>
         </h1>
-        
-        <p className="text-xl md:text-2xl text-zinc-600 max-w-2xl mx-auto leading-relaxed font-light">
-          The Clear Change® 28-Day Program: A comprehensive approach to cellular clearing, energy restoration, and metabolic support.
+
+        <p className="text-xl md:text-2xl text-zinc-600 max-w-3xl mx-auto leading-relaxed font-light">
+          Clear brain fog, boost energy, and reset your metabolism with our science-backed Root Cause Reset program
         </p>
 
-        <div className="flex flex-col items-center gap-8 pt-4">
-          <button 
+        {/* Value Proposition - What's Included */}
+        <div className="max-w-4xl mx-auto bg-white/60 backdrop-blur-md border-2 border-[#707756]/20 p-10 rounded-[2.5rem] shadow-2xl mt-8">
+          <h3 className="text-[#707756] text-2xl font-bold text-center mb-8">What's Included in Your 28-Day Reset:</h3>
+          <div className="grid md:grid-cols-2 gap-6 text-left">
+            {[
+              { icon: "fa-utensils", text: "28 days of meal plans & recipes" },
+              { icon: "fa-dumbbell", text: "Science-backed workouts for hormones & metabolism" },
+              { icon: "fa-video", text: "Weekly live interactive calls" },
+              { icon: "fa-user-md", text: "1:1 coaching support" },
+              { icon: "fa-users", text: "Community access for accountability" },
+              { icon: "fa-flask", text: "Professional-grade supplement kit delivered" }
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4">
+                <div className="w-10 h-10 bg-[#707756] rounded-full flex items-center justify-center flex-shrink-0">
+                  <i className={`fas ${item.icon} text-white text-sm`}></i>
+                </div>
+                <span className="text-zinc-700 text-lg font-medium pt-2">{item.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center gap-6 pt-4">
+          <div className="text-center space-y-3">
+            <p className="text-zinc-500 text-sm uppercase tracking-widest">One-Time Investment</p>
+            <p className="text-5xl font-bold text-[#707756]">$497</p>
+            <p className="text-zinc-600 text-sm">Free shipping • Instant portal access • 100% satisfaction guarantee</p>
+          </div>
+
+          <button
             onClick={onStart}
-            className="group relative bg-[#707756] text-white px-12 py-6 rounded-full text-xl font-bold hover:scale-105 transition-all shadow-xl tracking-tight"
+            className="group relative bg-gradient-to-r from-[#707756] to-[#606746] text-white px-16 py-7 rounded-full text-2xl font-bold hover:scale-105 transition-all shadow-2xl"
           >
-            Start Your Transformation — $497
+            Join the 28-Day Reset
           </button>
-          
-          <div className="flex flex-col items-center gap-3">
-            <p className="text-[#707756]/50 text-[10px] font-bold uppercase tracking-[0.3em]">Featuring Metagenics Technology</p>
+
+          <div className="flex flex-col items-center gap-3 mt-4">
+            <p className="text-[#707756]/50 text-xs font-bold uppercase tracking-[0.3em]">Featuring Metagenics Clinical Technology</p>
             <div className="flex gap-6 opacity-40 items-center grayscale">
               <span className="text-sm font-bold tracking-tighter">UltraClear RENEW</span>
               <span className="text-sm font-bold tracking-tighter">AdvaClear®</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Discovery Box */}
-        <div className="max-w-4xl mx-auto bg-white/40 backdrop-blur-md border border-[#707756]/10 p-10 rounded-[2.5rem] text-left mt-16 grid md:grid-cols-2 gap-10 items-center">
-          <div className="space-y-6">
-            <h3 className="text-[#707756] text-lg font-bold">The 28-Day Clear Change Method:</h3>
-            <ul className="space-y-4">
-              {[
-                "Phase I, II, and III liver detox support",
-                "Alkalinization and heavy metal metabolism",
-                "Low-allergy rice protein nutritional base",
-                "Antioxidant protection against detox byproducts"
-              ].map((text, i) => (
-                <li key={i} className="flex items-start gap-3 text-zinc-600 text-sm">
-                  <i className="fas fa-chevron-right text-[#afa790] text-[10px] mt-1"></i>
-                  {text}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="grid grid-cols-2 gap-6 border-l border-[#707756]/10 pl-10 hidden md:grid text-center">
-            <div className="space-y-1">
-              <div className="text-[#707756] font-bold text-3xl font-serif">28</div>
-              <div className="text-[10px] text-zinc-500 uppercase tracking-widest font-bold">Days</div>
-            </div>
-            <div className="space-y-1">
-              <div className="text-[#707756] font-bold text-3xl font-serif">50+</div>
-              <div className="text-[10px] text-zinc-500 uppercase tracking-widest font-bold">Health Score</div>
-            </div>
-            <div className="space-y-1">
-              <div className="text-[#707756] font-bold text-3xl font-serif">100%</div>
-              <div className="text-[10px] text-zinc-500 uppercase tracking-widest font-bold">Digital Guide</div>
-            </div>
-            <div className="space-y-1">
-              <div className="text-[#707756] font-bold text-3xl font-serif">0</div>
-              <div className="text-[10px] text-zinc-500 uppercase tracking-widest font-bold">Hidden Costs</div>
             </div>
           </div>
         </div>

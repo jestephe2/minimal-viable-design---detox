@@ -7,65 +7,65 @@ interface Upsell2aPageProps {
 
 const Upsell2aPage: React.FC<Upsell2aPageProps> = ({ onAccept, onDecline }) => {
   return (
-    <div className="min-h-screen bg-zinc-950 text-white">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-50">
       {/* Hero Section */}
       <section className="relative py-20 px-6 md:px-12 text-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/10 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-100/40 to-transparent"></div>
         <div className="relative max-w-4xl mx-auto space-y-6">
-          <div className="inline-block px-6 py-2 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-sm font-bold uppercase tracking-widest">
-            🎯 Final Opportunity - Limited Spots Available
+          <div className="inline-block px-6 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-700 text-sm font-bold uppercase tracking-widest">
+            🎯 One-Time Opportunity - Limited Spots
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            Don't Lose Your <span className="text-emerald-400">Momentum</span>
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight text-zinc-900">
+            Start Your Journey <span className="text-blue-600">With Expert Guidance</span>
           </h1>
 
-          <p className="text-2xl md:text-3xl text-zinc-300 font-light">
-            What happens on Day 29? Keep the transformation going with our <span className="text-emerald-400 font-bold">Maintenance & Extension Plan</span>
+          <p className="text-2xl md:text-3xl text-zinc-700 font-light">
+            Get <span className="text-blue-600 font-bold">personalized preparation</span> before you begin your detox
           </p>
 
-          <div className="bg-zinc-900/80 backdrop-blur border border-zinc-800 rounded-3xl p-8 max-w-2xl mx-auto">
-            <p className="text-lg text-zinc-400 mb-4">
-              Here's the hard truth most people discover too late...
+          <div className="bg-white/80 backdrop-blur border border-blue-200 rounded-3xl p-8 max-w-2xl mx-auto shadow-xl">
+            <p className="text-lg text-zinc-600 mb-4">
+              The difference between an average detox and a transformative one?
             </p>
-            <p className="text-xl text-white font-semibold">
-              The first 28 days are just the beginning. Day 29-58 is where the real, lasting transformation happens.
+            <p className="text-xl text-zinc-900 font-semibold">
+              Having a doctor review your health history and create a personalized optimization plan before you start.
             </p>
           </div>
         </div>
       </section>
 
       {/* Problem Section */}
-      <section className="py-16 px-6 md:px-12 bg-zinc-900/50">
+      <section className="py-16 px-6 md:px-12 bg-blue-50/50">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            What Happens When You Stop After 28 Days?
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-zinc-900">
+            Why Most People Don't Get Optimal Results
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                icon: "fa-undo",
-                title: "The Rebound Effect",
-                description: "Without a maintenance plan, 67% of people regain weight and symptoms within 60 days of finishing their detox."
+                icon: "fa-question-circle",
+                title: "Unprepared",
+                description: "Starting without understanding your unique health needs and how to optimize for your specific situation"
               },
               {
-                icon: "fa-chart-line-down",
-                title: "Lost Momentum",
-                description: "You've spent 28 days building new habits. Without continued support, they fade and you're back to square one."
+                icon: "fa-dizzy",
+                title: "Detox Symptoms",
+                description: "Experiencing unnecessary discomfort because you didn't know how to prepare your body properly"
               },
               {
-                icon: "fa-door-open",
-                title: "Incomplete Healing",
-                description: "Your body is just getting started. True cellular regeneration takes 60-90 days to fully complete."
+                icon: "fa-chart-line",
+                title: "Suboptimal Results",
+                description: "Missing key opportunities to maximize your transformation because you didn't have personalized guidance"
               }
             ].map((item, i) => (
-              <div key={i} className="bg-zinc-800/50 border border-red-900/20 rounded-2xl p-6 space-y-3">
-                <div className="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center">
-                  <i className={`fas ${item.icon} text-red-400 text-xl`}></i>
+              <div key={i} className="bg-white border border-blue-200 rounded-2xl p-6 space-y-3 shadow-lg">
+                <div className="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center">
+                  <i className={`fas ${item.icon} text-red-500 text-xl`}></i>
                 </div>
-                <h3 className="text-xl font-bold">{item.title}</h3>
-                <p className="text-zinc-400">{item.description}</p>
+                <h3 className="text-xl font-bold text-zinc-900">{item.title}</h3>
+                <p className="text-zinc-600">{item.description}</p>
               </div>
             ))}
           </div>
@@ -73,126 +73,139 @@ const Upsell2aPage: React.FC<Upsell2aPageProps> = ({ onAccept, onDecline }) => {
       </section>
 
       {/* Solution Section */}
-      <section className="py-16 px-6 md:px-12">
+      <section className="py-16 px-6 md:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              The <span className="text-emerald-400">Maintenance & Extension Plan</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-zinc-900">
+              Introducing: <span className="text-blue-600">Root Cause Reset Coaching Call</span>
             </h2>
-            <p className="text-xl text-zinc-400">
-              30 additional days of guided support to lock in your results permanently
+            <p className="text-xl text-zinc-600">
+              Live 1-on-1 Zoom call with Dr. Emily BEFORE you start your detox
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                icon: "fa-clipboard-list",
-                title: "Transition Protocol Guide",
-                description: "Step-by-step plan for reintroducing foods without triggering inflammation or weight gain"
-              },
-              {
-                icon: "fa-utensils",
-                title: "30-Day Meal Plans",
-                description: "Delicious maintenance recipes designed to sustain your energy and keep the weight off"
-              },
-              {
-                icon: "fa-heartbeat",
-                title: "Extended Supplement Support",
-                description: "30-day supply of maintenance supplements to support ongoing cellular health"
-              },
-              {
-                icon: "fa-user-md",
-                title: "1-on-1 Check-In Call",
-                description: "30-minute coaching session to review progress, troubleshoot challenges, and plan your next 90 days"
-              }
-            ].map((item, i) => (
-              <div key={i} className="bg-gradient-to-br from-zinc-800 to-zinc-900 border border-emerald-500/20 rounded-2xl p-6 space-y-3">
-                <div className="w-12 h-12 bg-emerald-500/10 rounded-full flex items-center justify-center">
-                  <i className={`fas ${item.icon} text-emerald-400 text-xl`}></i>
-                </div>
-                <h3 className="text-xl font-bold">{item.title}</h3>
-                <p className="text-zinc-400">{item.description}</p>
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-3xl p-8 mb-8 shadow-2xl">
+            <div className="flex items-start gap-6 mb-8">
+              <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 shadow-lg">
+                <img
+                  src="/images/dr. emily headshot.png"
+                  alt="Dr. Emily Plasker, DC, IHP"
+                  className="w-full h-full object-cover"
+                />
               </div>
-            ))}
+              <div>
+                <h3 className="text-2xl font-bold text-zinc-900 mb-2">Meet Dr. Emily Plasker, DC, IHP</h3>
+                <p className="text-zinc-700">
+                  Doctor of Chiropractic and Integrative Health Practitioner with over 15 years of experience helping thousands of clients achieve optimal health through personalized detox protocols.
+                </p>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-bold text-center mb-6 text-zinc-900">What You'll Get On Your Call:</h3>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                {
+                  icon: "fa-clipboard-list",
+                  title: "Complete Health History Review",
+                  description: "Dr. Emily will review your current health status, medications, symptoms, and goals to create your personalized plan"
+                },
+                {
+                  icon: "fa-chart-line",
+                  title: "Detox Optimization Strategy",
+                  description: "Learn exactly how to optimize your detox experience based on your unique health profile and lifestyle"
+                },
+                {
+                  icon: "fa-shield-alt",
+                  title: "Preparation Guidance",
+                  description: "Get specific recommendations on how to prepare your body, mind, and environment for maximum success"
+                },
+                {
+                  icon: "fa-question",
+                  title: "Q&A Session",
+                  description: "Ask Dr. Emily any questions you have about the detox, your health concerns, or how to get the best results"
+                }
+              ].map((item, i) => (
+                <div key={i} className="bg-white border border-blue-200 rounded-xl p-5 space-y-2 shadow-md hover:shadow-xl transition-shadow">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <i className={`fas ${item.icon} text-blue-600 text-lg`}></i>
+                    </div>
+                    <h4 className="text-lg font-bold text-zinc-900">{item.title}</h4>
+                  </div>
+                  <p className="text-zinc-600 text-sm">{item.description}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 bg-white border border-blue-300 rounded-2xl p-6">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <i className="fas fa-calendar-check text-blue-600 text-xl"></i>
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold text-zinc-900 mb-2">Scheduled Before Your Detox Starts</h4>
+                  <p className="text-zinc-600">
+                    Your call will be scheduled within 48 hours of purchase, giving you plenty of time to prepare and start your detox with confidence and clarity.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Value Comparison */}
-          <div className="mt-12 bg-zinc-900 border border-zinc-800 rounded-3xl p-8 max-w-2xl mx-auto">
+          <div className="mt-12 bg-gradient-to-br from-blue-100 to-indigo-100 border-2 border-blue-400 rounded-3xl p-8 max-w-2xl mx-auto shadow-2xl">
             <div className="text-center space-y-4">
-              <p className="text-zinc-400 text-lg">Regular Maintenance Plan:</p>
-              <div className="text-5xl font-bold line-through text-zinc-600">$197</div>
-              <p className="text-2xl text-emerald-400 font-semibold">Special Upgrade Price:</p>
-              <div className="text-6xl font-bold text-emerald-400">$97</div>
-              <p className="text-yellow-400 text-xl font-semibold">
-                Save $100 (51% OFF) - Today Only
+              <p className="text-zinc-700 text-lg font-semibold">Private Coaching Call Value:</p>
+              <div className="text-5xl font-bold line-through text-zinc-500">$197</div>
+              <p className="text-2xl text-blue-700 font-semibold">Your Price Today:</p>
+              <div className="text-6xl font-bold text-blue-600">$97</div>
+              <p className="text-emerald-600 text-xl font-semibold">
+                Save $100 (51% OFF) - One-Time Offer
               </p>
+              <div className="bg-white/60 rounded-xl p-4 mt-4">
+                <p className="text-sm text-zinc-700 font-medium">
+                  ✓ Live 1-on-1 Zoom call with Dr. Emily<br />
+                  ✓ Personalized health history review<br />
+                  ✓ Customized optimization recommendations<br />
+                  ✓ Scheduled before your detox starts
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 px-6 md:px-12 bg-zinc-900/50">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            The Numbers Don't Lie
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            {[
-              {
-                stat: "87%",
-                label: "Maintain their weight loss long-term with a maintenance plan"
-              },
-              {
-                stat: "2.4x",
-                label: "More energy reported by people who continue for 60 days vs. 28"
-              },
-              {
-                stat: "92%",
-                label: "Say the transition protocol prevented them from relapsing"
-              }
-            ].map((item, i) => (
-              <div key={i} className="space-y-3">
-                <div className="text-5xl md:text-6xl font-bold text-emerald-400">{item.stat}</div>
-                <p className="text-zinc-300 text-lg">{item.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Social Proof */}
-      <section className="py-16 px-6 md:px-12">
+      <section className="py-16 px-6 md:px-12 bg-blue-50/50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Success Stories from Extended Members
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-zinc-900">
+            What Our Clients Say
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                name: "Jessica R.",
-                result: "Kept off 22 lbs for 6+ months",
-                quote: "The transition protocol was a lifesaver. I learned exactly how to reintroduce foods without gaining the weight back. Six months later and I'm still going strong!"
+                name: "Lisa R.",
+                result: "Lost 18 lbs, no side effects",
+                quote: "The coaching call with Dr. Emily made ALL the difference. She identified a few things about my health history that changed my entire approach. I had zero detox headaches and felt amazing the whole time!"
               },
               {
-                name: "Michael P.",
-                result: "Doubled his energy levels",
-                quote: "I almost stopped at day 28, but I'm so glad I continued. The second month is where everything clicked. Now I wake up at 5am naturally with more energy than I've had in 20 years."
+                name: "Michael T.",
+                result: "Best detox experience ever",
+                quote: "I've done detoxes before but never had a doctor review my situation first. Dr. Emily's personalized recommendations helped me avoid the mistakes I made in the past. This was by far my best detox experience."
               }
             ].map((testimonial, i) => (
-              <div key={i} className="bg-zinc-800 border border-zinc-700 rounded-2xl p-6 space-y-4">
-                <div className="flex gap-1 text-emerald-400">
+              <div key={i} className="bg-white border border-blue-200 rounded-2xl p-6 space-y-4 shadow-lg">
+                <div className="flex gap-1 text-blue-500">
                   {[...Array(5)].map((_, i) => (
                     <i key={i} className="fas fa-star"></i>
                   ))}
                 </div>
-                <p className="text-zinc-300 italic">"{testimonial.quote}"</p>
-                <div className="border-t border-zinc-700 pt-4">
-                  <p className="font-bold">{testimonial.name}</p>
-                  <p className="text-emerald-400 text-sm font-semibold">{testimonial.result}</p>
+                <p className="text-zinc-700 italic">"{testimonial.quote}"</p>
+                <div className="border-t border-blue-200 pt-4">
+                  <p className="font-bold text-zinc-900">{testimonial.name}</p>
+                  <p className="text-emerald-600 text-sm font-semibold">{testimonial.result}</p>
                 </div>
               </div>
             ))}
@@ -201,30 +214,34 @@ const Upsell2aPage: React.FC<Upsell2aPageProps> = ({ onAccept, onDecline }) => {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 px-6 md:px-12 bg-zinc-900/50">
+      <section className="py-16 px-6 md:px-12 bg-white">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Quick Questions
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-zinc-900">
+            Common Questions
           </h2>
 
           <div className="space-y-6">
             {[
               {
-                q: "When does the maintenance plan start?",
-                a: "You'll receive your materials immediately, designed to begin on Day 29 after your initial 28-day detox is complete."
+                q: "When will my call be scheduled?",
+                a: "Within 48 hours of purchase, you'll receive an email with a calendar link to book your call at a time that works for you. We recommend scheduling it at least a few days before you plan to start your detox."
               },
               {
-                q: "What if I want to take a break first?",
-                a: "We recommend starting the maintenance phase right after completing the detox for optimal results, but the materials are yours to use whenever you're ready."
+                q: "How long is the coaching call?",
+                a: "Your call with Dr. Emily will be approximately 30-45 minutes, giving plenty of time to review your health history, discuss your goals, and create your personalized optimization plan."
               },
               {
-                q: "Can I get this offer later?",
-                a: "Unfortunately no. This special $97 pricing is only available right now as a one-time offer. After this page, the Maintenance Plan returns to $197."
+                q: "What if I have a complex health history?",
+                a: "Perfect! Dr. Emily specializes in working with people who have complex health situations. She'll take extra time to ensure you're set up for success, regardless of your health history."
+              },
+              {
+                q: "Is this a group call or private?",
+                a: "This is a completely private 1-on-1 call with Dr. Emily. Everything discussed is confidential, and the entire session is focused solely on you and your health goals."
               }
             ].map((faq, i) => (
-              <div key={i} className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 space-y-3">
-                <h3 className="text-xl font-bold text-emerald-400">{faq.q}</h3>
-                <p className="text-zinc-300">{faq.a}</p>
+              <div key={i} className="bg-blue-50 border border-blue-200 rounded-2xl p-6 space-y-3 shadow-md">
+                <h3 className="text-xl font-bold text-blue-700">{faq.q}</h3>
+                <p className="text-zinc-700">{faq.a}</p>
               </div>
             ))}
           </div>
@@ -232,42 +249,42 @@ const Upsell2aPage: React.FC<Upsell2aPageProps> = ({ onAccept, onDecline }) => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-zinc-900 to-zinc-950">
+      <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-blue-100 to-indigo-100">
         <div className="max-w-3xl mx-auto text-center space-y-8">
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-            Lock In Your Results Forever
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-zinc-900">
+            Ready to Optimize Your Detox?
           </h2>
 
-          <div className="bg-zinc-900/80 backdrop-blur border border-emerald-500/30 rounded-3xl p-8 space-y-6">
+          <div className="bg-white backdrop-blur border-2 border-blue-400 rounded-3xl p-8 space-y-6 shadow-2xl">
             <div className="space-y-2">
-              <p className="text-zinc-400 line-through text-2xl">Regular Price: $197</p>
-              <p className="text-5xl font-bold text-emerald-400">Just $97 Today</p>
-              <p className="text-yellow-400 font-semibold text-xl">Save $100 - One-Time Offer</p>
+              <p className="text-zinc-600 line-through text-2xl">Regular Price: $197</p>
+              <p className="text-5xl font-bold text-blue-600">Just $97 Today</p>
+              <p className="text-emerald-600 font-semibold text-xl">Save $100 - Never Offered Again</p>
             </div>
 
             <button
               onClick={onAccept}
-              className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white py-6 px-8 rounded-full text-2xl font-bold hover:scale-105 transition-all shadow-2xl shadow-emerald-500/20"
+              className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-6 px-8 rounded-full text-2xl font-bold hover:scale-105 transition-all shadow-2xl shadow-blue-500/30"
             >
-              YES! Add Maintenance Plan — $97
+              YES! Add Coaching Call — $97
             </button>
 
-            <div className="flex items-center justify-center gap-2 text-zinc-400 text-sm">
+            <div className="flex items-center justify-center gap-2 text-zinc-600 text-sm">
               <i className="fas fa-lock"></i>
-              <span>Secure checkout • 30-day money-back guarantee</span>
+              <span>Secure checkout • Call scheduled within 48 hours</span>
             </div>
           </div>
 
           <button
             onClick={onDecline}
-            className="text-zinc-500 hover:text-zinc-300 font-medium transition-colors text-lg underline"
+            className="text-zinc-500 hover:text-zinc-700 font-medium transition-colors text-lg underline"
           >
-            No thanks, I'll complete my purchase without the maintenance plan
+            No thanks, I'll start my detox without personalized guidance
           </button>
 
-          <div className="pt-8 border-t border-zinc-800">
-            <p className="text-zinc-600 text-sm italic">
-              This pricing is only available on this page and expires when you continue.
+          <div className="pt-8 border-t border-blue-300">
+            <p className="text-zinc-500 text-sm italic">
+              This offer expires when you leave this page and cannot be retrieved.
             </p>
           </div>
         </div>

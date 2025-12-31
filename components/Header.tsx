@@ -11,17 +11,12 @@ const Header: React.FC = () => {
         <span className="text-lg font-bold tracking-tight text-[#707756] hidden sm:inline uppercase">Rooted Wellness</span>
       </div>
       
-      <div className="flex items-center gap-4 md:gap-10">
-        <nav className="hidden md:flex items-center gap-8 text-[11px] font-bold tracking-[0.15em] uppercase text-[#707756]/60">
-          <a href="#method" className="hover:text-[#707756] transition-colors">The Protocol</a>
-          <a href="#proof" className="hover:text-[#707756] transition-colors">Client Results</a>
-          <a href="#faq" className="hover:text-[#707756] transition-colors">Help</a>
-        </nav>
-        <a 
+      <div className="flex items-center gap-4 md:gap-6">
+        <a
           href="#join"
-          className="bg-[#707756] text-white px-6 py-2.5 rounded-full hover:bg-[#606746] transition-all text-[10px] font-bold uppercase tracking-[0.2em]"
+          className="bg-gradient-to-r from-[#707756] to-[#606746] text-white px-8 py-4 rounded-full hover:scale-105 transition-all text-sm md:text-xs font-bold uppercase tracking-[0.15em] shadow-lg"
         >
-          Get Started — $497
+          Join the 28-Day Reset
         </a>
       </div>
     </header>

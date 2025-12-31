@@ -116,8 +116,8 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ onSuccess, onCancel, pr
       <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
         <div className="p-8 space-y-6">
           <div className="flex justify-between items-center">
-            <button onClick={onCancel} className="text-zinc-400 hover:text-zinc-600">
-              <i className="fas fa-arrow-left"></i>
+            <button onClick={onCancel} className="text-zinc-400 hover:text-zinc-600 p-3 -ml-3">
+              <i className="fas fa-arrow-left text-lg"></i>
             </button>
             <div className="flex items-center gap-1">
               <i className="fab fa-stripe text-4xl text-[#635bff]"></i>
@@ -137,7 +137,7 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ onSuccess, onCancel, pr
             </div>
           </div>
 
-          <p className="text-[10px] text-center text-zinc-400">
+          <p className="text-xs text-center text-zinc-400">
             <i className="fas fa-shield-alt mr-1"></i>
             Secure checkout powered by Stripe. Your payment information is encrypted and never touches our servers.
           </p>

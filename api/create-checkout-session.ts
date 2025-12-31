@@ -40,9 +40,8 @@ export default async function handler(
 
     const nextStep = stepMap[productType] || 'thankyou';
 
-    // TEMPORARY: Force localhost for testing
-    // TODO: Revert this before production launch
-    const baseUrl = 'http://localhost:3001';
+    // Use the request origin for dynamic URL (works for both localhost and production)
+    const baseUrl = req.headers.origin || 'https://rootcausereset.vercel.app';
 
     const sessionConfig: any = {
       mode: 'payment',

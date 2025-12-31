@@ -26,7 +26,7 @@ const Testimonials: React.FC = () => {
         </div>
         
         {/* Editorial Grid */}
-        <div className="grid md:grid-cols-12 gap-6 auto-rows-[300px] md:auto-rows-[400px]">
+        <div className="grid md:grid-cols-12 gap-6 auto-rows-[250px] md:auto-rows-[400px]">
           {/* Main Large Testimonial */}
           <div className="md:col-span-8 md:row-span-2 relative rounded-[3rem] overflow-hidden group border border-[#707756]/10 shadow-sm">
             <img 
@@ -39,7 +39,7 @@ const Testimonials: React.FC = () => {
                 <p className="text-3xl font-bold leading-tight italic serif-font">"{testimonials[0].quote}"</p>
                 <div className="flex items-center gap-6 border-t border-white/20 pt-6">
                   <span className="font-bold text-lg uppercase tracking-tighter">{testimonials[0].name}</span>
-                  <span className="text-white/80 font-bold uppercase tracking-[0.2em] text-[10px] px-3 py-1 bg-white/10 rounded-full">{testimonials[0].outcome}</span>
+                  <span className="text-white/80 font-bold uppercase tracking-[0.2em] text-xs px-3 py-1 bg-white/10 rounded-full">{testimonials[0].outcome}</span>
                 </div>
               </div>
             </div>
@@ -47,23 +47,23 @@ const Testimonials: React.FC = () => {
 
           {/* Vertical Small Testimonials */}
           <div className="md:col-span-4 bg-[#707756] text-white rounded-[3rem] p-10 flex flex-col justify-center space-y-8 shadow-xl">
-             <div className="text-white/40 font-bold uppercase tracking-[0.3em] text-[9px]">200+ Resetters</div>
+             <div className="text-white/40 font-bold uppercase tracking-[0.3em] text-xs">200+ Resetters</div>
              <p className="text-2xl italic font-serif leading-relaxed">"{testimonials[1].quote}"</p>
              <div className="flex items-center gap-4">
                <img src={testimonials[1].image} className="w-12 h-12 rounded-full grayscale border border-white/20" alt="User" />
                <div className="space-y-1">
                   <span className="block font-bold text-sm">{testimonials[1].name}</span>
-                  <span className="block text-[10px] uppercase text-white/50 tracking-widest">{testimonials[1].outcome}</span>
+                  <span className="block text-xs uppercase text-white/50 tracking-widest">{testimonials[1].outcome}</span>
                </div>
              </div>
           </div>
 
           <div className="md:col-span-4 bg-white p-10 rounded-[3rem] flex flex-col justify-center space-y-6 border border-[#707756]/5 shadow-sm">
             <div className="flex gap-1.5">
-              {[...Array(5)].map((_, i) => <i key={i} className="fas fa-star text-[#707756] text-[10px]"></i>)}
+              {[...Array(5)].map((_, i) => <i key={i} className="fas fa-star text-[#707756] text-xs"></i>)}
             </div>
             <p className="text-[#707756] font-serif text-lg leading-relaxed">"My goal wasn't to lose weight, but I found I dropped 3 pounds in the first 2 weeks, without starving myself!"</p>
-            <span className="text-[#afa790] text-[10px] font-bold uppercase tracking-[0.3em]">— Lori M.</span>
+            <span className="text-[#afa790] text-xs font-bold uppercase tracking-[0.3em]">— Lori M.</span>
           </div>
         </div>
       </div>

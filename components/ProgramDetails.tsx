@@ -36,7 +36,7 @@ const ProgramDetails: React.FC = () => {
             <div className="space-y-8">
               {components.map((item, idx) => (
                 <div key={idx} className="group p-8 rounded-[2rem] bg-white border border-[#707756]/5 hover:shadow-md transition-all">
-                  <div className="text-[#afa790] text-[9px] font-bold uppercase tracking-[0.3em] mb-2">{item.label}</div>
+                  <div className="text-[#afa790] text-xs font-bold uppercase tracking-[0.3em] mb-2">{item.label}</div>
                   <div className="flex gap-6 items-start">
                     <div className="w-12 h-12 rounded-xl bg-[#707756]/5 flex items-center justify-center text-[#707756] flex-shrink-0 group-hover:bg-[#707756] group-hover:text-white transition-colors duration-500">
                       <i className={`fas ${item.icon}`}></i>
@@ -54,7 +54,7 @@ const ProgramDetails: React.FC = () => {
           <div className="sticky top-32">
             <div className="bg-white p-12 rounded-[3rem] border border-[#707756]/10 shadow-sm space-y-10">
               <div className="text-center space-y-2">
-                <span className="text-[#afa790] uppercase tracking-[0.2em] text-[10px] font-bold">Program Overview</span>
+                <span className="text-[#afa790] uppercase tracking-[0.2em] text-xs font-bold">Program Overview</span>
                 <h3 className="text-[#707756] text-3xl font-bold">28 Days of Clarity</h3>
               </div>
               
@@ -68,7 +68,7 @@ const ProgramDetails: React.FC = () => {
                 ].map((text, i) => (
                   <div key={i} className="flex gap-4 items-center border-b border-zinc-100 pb-4">
                     <div className="w-5 h-5 rounded-full bg-[#707756]/10 flex items-center justify-center flex-shrink-0">
-                      <i className="fas fa-check text-[#707756] text-[8px]"></i>
+                      <i className="fas fa-check text-[#707756] text-xs"></i>
                     </div>
                     <span className="text-zinc-600 text-sm font-medium">{text}</span>
                   </div>
@@ -78,11 +78,11 @@ const ProgramDetails: React.FC = () => {
               <div className="pt-6">
                 <div className="flex justify-between items-center mb-8 bg-[#edede4]/50 p-6 rounded-2xl">
                   <div>
-                    <span className="block text-zinc-400 text-[10px] font-bold uppercase tracking-widest">Full Investment</span>
+                    <span className="block text-zinc-400 text-xs font-bold uppercase tracking-widest">Full Investment</span>
                     <span className="text-3xl font-bold text-[#707756]">$497</span>
                   </div>
                   <div className="text-right">
-                    <div className="text-[#afa790] text-[10px] font-bold uppercase">All Inclusive</div>
+                    <div className="text-[#afa790] text-xs font-bold uppercase">All Inclusive</div>
                     <div className="text-zinc-400 text-xs italic">Limited to current stock</div>
                   </div>
                 </div>

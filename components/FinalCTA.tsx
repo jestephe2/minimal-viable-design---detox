@@ -13,8 +13,8 @@ const FinalCTA: React.FC<FinalCTAProps> = ({ onStart }) => {
       
       <div className="max-w-6xl mx-auto text-center space-y-20 relative z-10">
         <div className="space-y-8">
-          <h2 className="text-6xl md:text-9xl font-bold tracking-tighter leading-[0.85] max-w-5xl mx-auto">
-            Ready for a <br /> 
+          <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] md:leading-[0.85] max-w-5xl mx-auto">
+            Ready for a <br />
             <span className="italic font-normal serif-font text-[#afa790]">Total Reset?</span>
           </h2>
           <p className="text-2xl text-zinc-500 max-w-2xl mx-auto font-light leading-relaxed">
@@ -34,10 +34,10 @@ const FinalCTA: React.FC<FinalCTAProps> = ({ onStart }) => {
               ].map((item, i) => (
                 <li key={i} className="flex gap-5">
                   <div className="w-6 h-6 rounded-full bg-[#707756]/10 flex items-center justify-center flex-shrink-0 mt-1">
-                    <i className="fas fa-check text-[#707756] text-[10px]"></i>
+                    <i className="fas fa-check text-[#707756] text-xs"></i>
                   </div>
                   <div className="space-y-1">
-                    <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#afa790]">{item.t}</div>
+                    <div className="text-xs font-bold uppercase tracking-[0.2em] text-[#afa790]">{item.t}</div>
                     <div className="text-zinc-600 text-sm leading-snug">{item.d}</div>
                   </div>
                 </li>
@@ -47,8 +47,8 @@ const FinalCTA: React.FC<FinalCTAProps> = ({ onStart }) => {
 
           <div className="flex flex-col justify-center gap-10 p-12">
             <div className="space-y-4">
-              <span className="text-[#afa790] uppercase tracking-[0.3em] text-[10px] font-bold">Full Program Kit</span>
-              <div className="text-8xl font-bold text-[#707756] tracking-tighter">$497</div>
+              <span className="text-[#afa790] uppercase tracking-[0.3em] text-xs font-bold">Full Program Kit</span>
+              <div className="text-6xl md:text-8xl font-bold text-[#707756] tracking-tighter">$497</div>
               <p className="text-[#707756] font-bold text-xs uppercase tracking-[0.1em]">Free Domestic Shipping Included</p>
             </div>
             
@@ -59,7 +59,7 @@ const FinalCTA: React.FC<FinalCTAProps> = ({ onStart }) => {
               Join Clear Change® Now
             </button>
             
-            <div className="flex flex-wrap gap-6 opacity-40 text-[9px] font-bold uppercase tracking-[0.2em] justify-center text-[#707756]">
+            <div className="flex flex-wrap gap-6 opacity-40 text-xs font-bold uppercase tracking-[0.2em] justify-center text-[#707756]">
               <span>Verified Secure</span>
               <span>•</span>
               <span>Instant Guide Access</span>
