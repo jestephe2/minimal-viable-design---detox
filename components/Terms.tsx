@@ -45,7 +45,7 @@ const Terms: React.FC = () => {
 
             <h3 className="text-xl font-semibold text-[#707756] mb-3 mt-6">Refund Policy</h3>
             <p>
-              Due to the digital nature of our program and immediate access to materials, all sales are final. Refunds may be considered on a case-by-case basis within 7 days of purchase if you have not accessed program materials or received your supplement kit.
+              We offer a 7-day satisfaction guarantee. If you are not satisfied with the program within 7 days of purchase, you may request a refund. Refunds will be issued less the cost of goods (supplement kit and shipping costs). If the supplement kit has been shipped or received, the cost of the kit and associated shipping will be deducted from your refund. Digital materials access alone does not disqualify you from a refund during the 7-day window.
             </p>
           </section>
 

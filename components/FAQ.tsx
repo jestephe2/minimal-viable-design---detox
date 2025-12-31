@@ -23,7 +23,7 @@ const FAQ: React.FC = () => {
     },
     {
       q: "What's your refund policy?",
-      a: "We offer a 7-day, no-questions-asked money-back guarantee. If you decide Root Cause Reset isn't for you within the first week, just email us for a full refund."
+      a: "We offer a 7-day satisfaction guarantee. If you're not satisfied within 7 days of purchase, you may request a refund less the cost of goods (supplement kit and shipping costs). If the supplement kit has been shipped or received, those costs will be deducted from your refund."
     },
     {
       q: "Can I do this while working full-time?",

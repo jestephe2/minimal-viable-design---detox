@@ -30,7 +30,7 @@ const FinalCTA: React.FC<FinalCTAProps> = ({ onStart }) => {
                 { t: "The Investment", d: "One-time $497 payment. Lifetime metabolic knowledge." },
                 { t: "The Effort", d: "Meal plans, supplement timing, and recipes are pre-mapped." },
                 { t: "The Trust", d: "Metagenics-powered nutrients used by global top practitioners." },
-                { t: "The Risk", d: "7-day no-questions-asked guarantee if it's not the right fit." }
+                { t: "The Risk", d: "7-day satisfaction guarantee (refund less cost of goods if kit shipped)." }
               ].map((item, i) => (
                 <li key={i} className="flex gap-5">
                   <div className="w-6 h-6 rounded-full bg-[#707756]/10 flex items-center justify-center flex-shrink-0 mt-1">
